@@ -1,0 +1,35 @@
+/* header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+} */
+
+h1 {
+  text-align: center;
+}
+
+h1 > * {
+  color: black;
+}
+
+nav {
+  height: 2rem;
+  width: 100vw;
+  background-color: #009a00;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav > * {
+  padding: 0 1rem;
+  color: white;
+}
+
+.Header__Link {
+  text-decoration: none;
+}
+
+.Header__span___usersName {
+  margin-right: auto;
+}

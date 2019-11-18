@@ -1,0 +1,14 @@
+.LoginForm {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.LoginForm > *:not(button) {
+  padding: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+}

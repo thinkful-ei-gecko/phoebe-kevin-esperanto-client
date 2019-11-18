@@ -13,27 +13,45 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div>
-        <span>
+      <nav>
+        <span className='Header__span___usersName italic'>
           {this.context.user.name}
         </span>
-        <nav>
-          <Link
-            onClick={this.handleLogoutClick}
-            to='/login'>
-            Logout
-          </Link>
-        </nav>
-      </div>
+        <Link 
+          className='Header__Link'
+          onClick={this.handleLogoutClick}
+          to='/login'>
+          Logout
+        </Link>
+      </nav>
     )
   }
+
+  // if needed for ReferenceError, this is the old renderLogoutLink
+  // renderLogoutLink() {
+  //   return (
+  //     <div className='Header___private'>
+  //       <nav>
+  //         <Link 
+  //           className='Header__Link'
+  //           onClick={this.handleLogoutClick}
+  //           to='/login'>
+  //           Logout
+  //         </Link>
+  //       </nav>
+  //       <span>
+  //         {this.context.user.name}
+  //       </span>
+  //     </div>
+  //   )
+  // }
 
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login'>Login</Link>
+        <Link className='Header__Link'to='/login'>Login</Link>
         {' '}
-        <Link to='/register'>Sign up</Link>
+        <Link className='Header__Link'to='/register'>Sign up</Link>
       </nav>
     )
   }
@@ -41,14 +59,14 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h1>
-          <Link to='/'>
-            Spaced repetition
-          </Link>
-        </h1>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
+        <h1>
+          <Link className='Header__Link'to='/'>
+            Spaced repetition
+          </Link>
+        </h1>
       </header>
     );
   }

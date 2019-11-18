@@ -1,0 +1,26 @@
+.RegistrationForm {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.RegistrationForm > * {
+  padding: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.RegistrationForm__footer {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.RegistrationForm__Link {
+  color: rgb(26, 115, 232);
+  margin-left: 1.5rem;
+}

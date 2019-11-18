@@ -1,0 +1,8 @@
+.Input {
+  border: solid 1px lightgray;
+  border-radius: 3px;
+  box-shadow: none;
+  height: 2.5rem;
+  padding: .5rem;
+  font-size: calc(10px + 1vmin);
+}

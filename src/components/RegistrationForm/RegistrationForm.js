@@ -40,7 +40,8 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state
     return (
-      <form
+      <form 
+        className='RegistrationForm'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
@@ -54,6 +55,7 @@ class RegistrationForm extends Component {
             ref={this.firstInput}
             id='registration-name-input'
             name='name'
+            autocomplete='name'
             required
           />
         </div>
@@ -78,12 +80,12 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <footer>
+        <footer className='RegistrationForm__footer'>
           <Button type='submit'>
             Sign up
           </Button>
           {' '}
-          <Link to='/login'>Already have an account?</Link>
+          <Link className='RegistrationForm__Link' to='/login'>Already have an account?</Link>
         </footer>
       </form>
     )
