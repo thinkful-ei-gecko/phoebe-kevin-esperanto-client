@@ -13,7 +13,7 @@ class DashboardRoute extends Component {
 		} else {
       return (
         <section>
-          <h2>Your {this.context.language.name} Progress</h2>
+          <h2>{language.name} Progress</h2>
           <Dashboard />
         </section>
       );
@@ -21,4 +21,4 @@ class DashboardRoute extends Component {
   }
 }
 
-export default DashboardRoute
+export default DashboardRoute;
