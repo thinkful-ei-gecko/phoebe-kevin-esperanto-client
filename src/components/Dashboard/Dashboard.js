@@ -31,9 +31,8 @@ export default class Dashboard extends Component {
 					</thead>
 					<tbody>
 						{words.map(word => {
-							console.log(word);
 							return (
-								<tr>
+								<tr key={word.id}>
 									<td>{word.original}</td>
 									<td>{word.translation}</td>
 									<td>{word.correct_count}</td>
