@@ -55,7 +55,7 @@ class RegistrationForm extends Component {
             ref={this.firstInput}
             id='registration-name-input'
             name='name'
-            autocomplete='name'
+            autoComplete='name'
             required
           />
         </div>
