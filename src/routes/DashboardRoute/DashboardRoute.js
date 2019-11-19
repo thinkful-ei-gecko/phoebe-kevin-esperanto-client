@@ -20,7 +20,7 @@ class DashboardRoute extends Component {
     } else {
       return (
         <section>
-          <h2>{language.name} Progress</h2>
+          <h2>{language.name}</h2>
           <Dashboard />
         </section>
       );

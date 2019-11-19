@@ -12,23 +12,21 @@ export default class Dashboard extends Component {
 
     return (
       <>
-        <h3>Words to Practice</h3>
+        <h3>Words to practice</h3>
         <ul>
-          {words.map((word) => {
+				{words.map((word, index) => {
             return (
-              <li key={word.id}>
-                <span className="bold">{word.original}</span>
-                <ul>
-                  <li>correct answer count: {word.correct_count}</li>
-                  <li>incorrect answer count: {word.incorrect_count}</li>
-                </ul>
+              <li key={index}>
+                <h4>{word.original}</h4>
+								<p>correct answer count: {word.correct_count}</p>
+								<p>incorrect answer count: {word.incorrect_count}</p>
               </li>
             );
           })}
         </ul>
-        <h3>Total correct answers: {language.total_score}</h3>
+        <h5>Total correct answers: {language.total_score}</h5>
         <a href="/learn">
-          <Button>Start practicing!</Button>
+          <Button>Start practicing</Button>
         </a>
       </>
     );
