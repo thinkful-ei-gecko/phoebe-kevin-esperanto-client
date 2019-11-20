@@ -86,7 +86,7 @@ export default class Learning extends Component {
 		console.log(this.state);
 		return (
 			<>      
-				{(this.state.submit) ? (
+				{(!this.state.submit) ? (
 				<>
 					<h2>Translate the word:</h2>
 					<span>{nextWord}</span>
