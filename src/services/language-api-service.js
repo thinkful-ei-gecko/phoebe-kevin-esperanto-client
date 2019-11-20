@@ -16,7 +16,7 @@ const languageApiService = {
         )
   },
 
-  getNextWord() {
+  getFirstWord() {
     return fetch(`${config.REACT_APP_API_ENDPOINT}/language/head`, {
       method: 'GET',
       headers: {
@@ -28,7 +28,26 @@ const languageApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
         )
+  },
+
+  postGuess(guess) {
+    console.log({guess})
+    return fetch(`${config.REACT_APP_API_ENDPOINT}/language/guess`, {
+      method: 'POST',
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({ guess })
+    })
+      .then(res => 
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+        )
   }
+
+
 }
 
 export default languageApiService

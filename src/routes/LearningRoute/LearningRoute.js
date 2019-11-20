@@ -8,10 +8,12 @@ class LearningRoute extends Component {
   static contextType = LanguageContext
 
   componentDidMount = () => {
-    languageApiService.getNextWord().then((res) => {
-      const { nextWord, totalScore, wordCorrectCount, wordIncorrectCount } = res;
-      this.context.setNewWord(nextWord, totalScore, wordCorrectCount, wordIncorrectCount);
-    });
+    languageApiService.getFirstWord()
+      .then(res => {
+        //destructure word object and set its values to the variables in context 
+        const { nextWord, totalScore, wordCorrectCount, wordIncorrectCount } = res;
+        this.context.setNewWord(nextWord, totalScore, wordCorrectCount, wordIncorrectCount);
+      });
   }
 
   render() {
