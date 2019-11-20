@@ -29,7 +29,6 @@ export default class Learning extends Component {
 				answer,
 				isCorrect
 			} = res;
-			console.log(res);
 
 			//Saved returned values to state so that they can be passed into context on click "next"
 			const nextWordInfo = {
@@ -49,7 +48,7 @@ export default class Learning extends Component {
 		});
 	};
 
-	handleNextWord = () => {
+	handleNextWord = e => {
 		this.resetState();
 		const {
 			nextWord,
@@ -67,7 +66,6 @@ export default class Learning extends Component {
 
 	resetState = () => {
 		this.setState({
-			totalScore: 0,
 			isCorrect: "",
 			submitted: false,
 			guess: "",
@@ -83,10 +81,9 @@ export default class Learning extends Component {
 
 	render = () => {
 		const { nextWord, wordCorrectCount, wordIncorrectCount } = this.context;
-		console.log(this.state);
 		return (
 			<>      
-				{(!this.state.submit) ? (
+				{(!this.state.submitted) ? (
 				<>
 					<h2>Translate the word:</h2>
 					<span>{nextWord}</span>
@@ -100,30 +97,31 @@ export default class Learning extends Component {
 					submitted={this.state.submitted}
         />)}
         
-				
 				<DisplayScore
 					totalScore={this.state.totalScore}
-					wordCorrectCount={this.state.wordCorrectCount}
-					wordIncorrectCount={this.state.word}
 				/>
-				<form onSubmit={this.handleSubmit}>
-					<label htmlFor='learn-guess-input'>
-						What's the translation for this word?
-					</label>
-					<input
-						id='learn-guess-input'
-						type='text'
-						defaultValue={this.state.guess}
-						onChange={e => this.setState({ guess: e.target.value })}
-						required
-					></input>
-
-					{
-            (this.state.submitted) 
-              ? <Button type='button' onClick={this.handleNextWord}>Try another word!</Button>
-              : <Button type='submit'>Submit your answer</Button>
-          }
-				</form>
+				
+				{/* render the form only if a guess hasn't been submitted */}
+				{(!this.state.submitted) 
+					? (
+					<form onSubmit={this.handleSubmit}>
+						<label htmlFor='learn-guess-input'>
+							What's the translation for this word?
+						</label>
+						<input
+							id='learn-guess-input'
+							type='text'
+							defaultValue={this.state.guess}
+							onChange={e => this.setState({ guess: e.target.value })}
+							required
+						></input>
+						<Button type='submit'>Submit your answer</Button>
+					</form>
+				) : (
+					// Otherwise just render the next button
+					<Button onClick={this.handleNextWord}>Try another word!</Button>
+				)}
+				
 				<p>You have answered this word correctly {wordCorrectCount} times.</p>
 				<p>
 					You have answered this word incorrectly {wordIncorrectCount} times.

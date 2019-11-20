@@ -28,3 +28,11 @@ a {
 .bold {
   font-weight: 600;
 }
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}

@@ -31,7 +31,6 @@ const languageApiService = {
   },
 
   postGuess(guess) {
-    console.log({guess})
     return fetch(`${config.REACT_APP_API_ENDPOINT}/language/guess`, {
       method: 'POST',
       headers: {
