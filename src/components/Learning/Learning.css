@@ -32,7 +32,7 @@
 .Learning__Label {
   color: gray;
   position: absolute;
-  left: calc((100% - 141px)/2);
+  left: 1.2em;
   /* left: 50%; */
   /* transform: translateX(-40%); */
   /* left: 0; */

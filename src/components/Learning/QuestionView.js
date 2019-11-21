@@ -23,6 +23,7 @@ const QuestionView = props => {
 							type='text'
 							defaultValue={props.guess}
 							onChange={e => props.setGuess(e.target.value)}
+							autoFocus
 							required
 						></Input>
 						<Button className='Learning__Button' type='submit'>
