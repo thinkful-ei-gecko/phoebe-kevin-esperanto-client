@@ -48,8 +48,8 @@ class LoginForm extends Component {
         className='LoginForm'
         onSubmit={this.handleSubmit}
       >
-        <div role='alert'>
-          {error && <p>{error}</p>}
+        <div role='alert' className='italic'>
+          {error && <p className='alert'>{error}</p>}
         </div>
         <div>
           <Label htmlFor='login-username-input'>

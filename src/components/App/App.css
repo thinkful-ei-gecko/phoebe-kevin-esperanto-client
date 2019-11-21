@@ -1,7 +1,8 @@
 .App > *:not(header) {
-  max-width: 900px;
+  max-width: 786px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem 1rem;
 }
 
 h2 {

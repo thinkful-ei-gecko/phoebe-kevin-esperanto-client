@@ -33,3 +33,9 @@ nav > * {
 .Header__span___usersName {
   margin-right: auto;
 }
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 0 calc((100vw - 768px)/2);
+  }
+}
