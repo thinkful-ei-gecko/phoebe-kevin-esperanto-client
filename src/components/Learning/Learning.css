@@ -32,10 +32,8 @@
 .Learning__Label {
   color: gray;
   position: absolute;
-  left: 1.2em;
-  /* left: 50%; */
-  /* transform: translateX(-40%); */
-  /* left: 0; */
+  /* centers for mobile screen */
+  left: calc((100% - 141px)/2);
   bottom: 5px;
 }
 
