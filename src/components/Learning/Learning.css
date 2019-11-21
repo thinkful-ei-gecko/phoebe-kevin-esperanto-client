@@ -75,6 +75,10 @@
   border: .5pt solid #EAEBE6;
 }
 
+.esperantoWord {
+  font-size: calc(19px + 1vmin);;
+}
+
 /* .DisplayScore__div {
   border: .5pt solid #EAEBE6;
 } */

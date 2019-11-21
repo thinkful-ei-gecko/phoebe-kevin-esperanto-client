@@ -7,7 +7,7 @@ const QuestionView = props => {
 		<>
 			<div className='Learning__mainContainer'>
 				<h2>Write this in English:</h2>
-				<span className='italic' dangerouslySetInnerHTML={{__html: props.nextWord}} />
+				<span className='italic esperantoWord' dangerouslySetInnerHTML={{__html: props.nextWord}} />
 				<form className='Learning__form' onSubmit={props.handleSubmit}>
 					<div className='Learning_div labelAndInputContainer'>
 						<Label
