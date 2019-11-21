@@ -1,0 +1,20 @@
+.Dashboard__ul {
+  display: flex;
+  flex-direction: column; 
+  list-style-type: none;
+}
+
+.Dashboard__li {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.table {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.Display__h4.word {
+  width: 150px;
+  margin: 0;
+}

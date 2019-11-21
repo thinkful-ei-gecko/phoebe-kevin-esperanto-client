@@ -3,10 +3,12 @@ import React, { Component } from "react";
 import languageApiService from "../../services/language-api-service";
 import LanguageContext from "../../contexts/LanguageContext";
 import DisplayScore from "./DisplayScore";
-import DisplayFeedback from "./DisplayFeedback";
-import { Label, Input } from "../../components/Form/Form";
-import Button from "../../components/Button/Button";
-import './Learning.css'
+// import DisplayFeedback from "./DisplayFeedback";
+import QuestionView from "./QuestionView";
+import FeedbackView from "./FeedbackView";
+// import { Label, Input } from "../../components/Form/Form";
+// import Button from "../../components/Button/Button";
+import "./Learning.css";
 
 export default class Learning extends Component {
 	static contextType = LanguageContext;
@@ -66,6 +68,10 @@ export default class Learning extends Component {
 		);
 	};
 
+	setGuess = guess => {
+		this.setState({guess})
+	}
+
 	resetState = () => {
 		this.setState({
 			isCorrect: "",
@@ -86,47 +92,24 @@ export default class Learning extends Component {
 		return (
 			<div className='Learning'>
 				<DisplayScore totalScore={this.state.totalScore} />
-
 				{!this.state.submitted ? (
-					<>
-						<h2>Translate to English:</h2>
-						<span className='italic'>{nextWord}</span>
-					</>
+					<QuestionView
+						nextWord={nextWord}
+						wordCorrectCount={wordCorrectCount}
+						wordIncorrectCount={wordIncorrectCount}
+						handleSubmit={this.handleSubmit}
+						setGuess={this.setGuess}
+					/>
 				) : (
-					<DisplayFeedback
+					<FeedbackView
 						isCorrect={this.state.isCorrect}
 						nextWord={nextWord}
 						answer={this.state.answer}
 						guess={this.state.guess}
 						submitted={this.state.submitted}
+						handleNextWord={this.handleNextWord}
 					/>
 				)}
-
-				{/* render the form only if a guess hasn't been submitted */}
-				{!this.state.submitted ? (
-					<form className='Learning__form' onSubmit={this.handleSubmit}>
-						<Label htmlFor='learn-guess-input'>
-							What's the translation for this word?
-						</Label>{' '}
-						<Input
-							className='Learning__Input'
-							id='learn-guess-input'
-							type='text'
-							defaultValue={this.state.guess}
-							onChange={e => this.setState({ guess: e.target.value })}
-							required
-						></Input>
-						<Button type='submit'>Submit your answer</Button>
-					</form>
-				) : (
-					// Otherwise just render the next button
-					<Button onClick={this.handleNextWord}>Try another word!</Button>
-				)}
-
-				<p className='Learning__p wordCounter'>You have answered this word correctly <span className='bold'>{wordCorrectCount}</span> times.</p>
-				<p className='Learning__p wordCounter'>
-					You have answered this word incorrectly <span className='bold'>{wordIncorrectCount}</span> times.
-				</p>
 			</div>
 		);
 	};

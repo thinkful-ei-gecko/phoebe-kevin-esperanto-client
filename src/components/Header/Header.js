@@ -14,9 +14,10 @@ class Header extends Component {
   renderLogoutLink() {
     return (
       <nav>
-        <span className='Header__span___usersName italic'>
-          {this.context.user.name}
-        </span>
+        <span className='Header__span___usersName'>
+          <Link to='/' className='italic'>{this.context.user.name}</Link>
+        </span>{' '}
+        <Link to='/'>Dashboard</Link>
         <Link 
           className='Header__Link'
           onClick={this.handleLogoutClick}
@@ -63,8 +64,8 @@ class Header extends Component {
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
         <h1>
-          <Link className='Header__Link'to='/'>
-            Spaced repetition
+          <Link className='Header__Link h1Link italic'to='/'>
+            ~irantas~
           </Link>
         </h1>
       </header>

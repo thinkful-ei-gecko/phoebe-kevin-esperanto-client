@@ -1,9 +1,22 @@
 .Button {
   background-color: #009a00;
-  border: 1pt solid #009a00;
-  border-radius: 3px;
+  border: clear;
+  border-radius: 5px;
   color: white;
+  font-size: 12pt;
   font-weight: 600;
   padding: .5rem 1rem;
+  box-shadow: 0 5px green;
+}
 
+.Button:hover {
+  background-color: #00B300;
+  box-shadow: 0 5px #009900;
+  cursor: pointer;
+}
+
+.Button:active {
+  background-color: #00B300;
+  box-shadow: none;
+  transform: translateY(5px);
 }

@@ -4,8 +4,9 @@
 
 .Learning__form {
   margin: 1rem 0;
+  height: 150px;
   padding: .75rem .5rem;
-  background: #9BB3A7;
+  /* background: #9BB3A7; */
 }
 
 .Learning__form > * {
@@ -14,8 +15,79 @@
 
 .Learning__Input {
   width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  text-align: center;
+  background-color: #FAFAFA;
 }
 
-.Learning__p.wordCounter {
-  
+.labelAndInputContainer {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  height: 70px;
+}
+
+.Learning__Label {
+  color: gray;
+  position: absolute;
+  left: calc((100% - 141px)/2);
+  /* left: 50%; */
+  /* transform: translateX(-40%); */
+  /* left: 0; */
+  bottom: 5px;
+}
+
+.Learning__Button {
+  width: 80%;
+  display: inline-block;
+  margin: 46px 0 0;
+  /* position: absolute; */
+  /* top: 70px; */
+}
+
+.DisplayScore__p {
+  font-size: 10pt;
+}
+
+.answers {
+  display: flex;
+  justify-content: column;
+  margin: 0 0 5px;
+}
+
+.wordCounter {
+  font-weight: 600;
+  font-size: 12pt;
+}
+
+.Learning__mainContainer {
+  /* background: #FEFFFA; */
+  background: white;
+  border: 2pt solid #EAEBE6;
+}
+
+.thisWordScore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: .5pt solid #EAEBE6;
+}
+
+/* .DisplayScore__div {
+  border: .5pt solid #EAEBE6;
+} */
+
+@media screen and (min-width: 768px) {
+  .labelAndInputContainer {
+    width: 500px;
+  }
+
+  .Learning__Button {
+    width: 120px;
+    position: absolute;
+    right: 0; top: 30px;
+  }
+
 }
