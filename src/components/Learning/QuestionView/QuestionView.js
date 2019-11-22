@@ -1,6 +1,6 @@
 import React from "react";
-import { Label, Input } from "../Form/Form";
-import Button from "../Button/Button";
+import { Label, Input } from "../../../components/Form/Form";
+import Button from "../../Button/Button";
 
 const QuestionView = props => {
 	return (

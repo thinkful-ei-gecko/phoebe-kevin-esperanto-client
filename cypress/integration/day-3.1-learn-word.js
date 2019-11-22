@@ -32,14 +32,14 @@ describe(`User story: Presented with word`, function() {
       .then(languageHeadFixture => {
         cy.get('main').within($main => {
           cy.get('h2')
-            .should('have.text', 'Translate to English:')
+            .should('have.text', 'Write this in English:')
             .siblings('span')
             .should('have.text', languageHeadFixture.nextWord)
         })
         cy.get('p').eq(0)
           .should(
             'have.text',
-            `Your total score is: ${languageHeadFixture.totalScore}`,
+            `Total Correct: ${languageHeadFixture.totalScore}`,
           )
       })
   })
@@ -51,14 +51,14 @@ describe(`User story: Presented with word`, function() {
 
     cy.get('main form').within($form => {
       cy.get('label[for=learn-guess-input]')
-        .should('have.text', `What's the translation for this word?`)
+        .should('have.text', `English Translation`)
 
       cy.get('input#learn-guess-input')
         .should('have.attr', 'type', 'text')
         .and('have.attr', 'required', 'required')
 
       cy.get('button[type=submit]')
-        .should('have.text', 'Submit your answer')
+        .should('have.text', 'Check')
     })
   })
 
@@ -72,11 +72,11 @@ describe(`User story: Presented with word`, function() {
         cy.root()
           .should(
             'contain',
-            `You have answered this word correctly ${languageHeadFixture.wordCorrectCount} times.`,
+            `Correct: ${languageHeadFixture.wordCorrectCount}`,
           )
           .and(
             'contain',
-            `You have answered this word incorrectly ${languageHeadFixture.wordIncorrectCount} times.`,
+            `Wrong: ${languageHeadFixture.wordIncorrectCount}`,
           )
       })
     })

@@ -4,7 +4,7 @@ import languageApiService from "../../services/language-api-service";
 import LanguageContext from "../../contexts/LanguageContext";
 import DisplayScore from "./DisplayScore";
 // import DisplayFeedback from "./DisplayFeedback";
-import QuestionView from "./QuestionView";
+import QuestionView from "./QuestionView/QuestionView";
 import FeedbackView from "./FeedbackView/FeedbackView";
 // import { Label, Input } from "../../components/Form/Form";
 // import Button from "../../components/Button/Button";
