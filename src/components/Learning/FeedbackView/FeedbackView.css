@@ -1,7 +1,17 @@
 .pContainer {
-  margin: 0 0 5px;
+  margin: 0;
 }
 
 .FeedbackView__Button {
-  margin: 1em 0 0 0;
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .FeedbackView__Button {
+    margin: 1em 0 .5em;
+  }
+
+  .FeedbackView__form {
+    text-align: right;
+  }
 }

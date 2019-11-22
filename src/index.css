@@ -66,7 +66,13 @@ a:focus, input:focus, button:focus {
   width: 80%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 246px) {
+  .mobile___longButton {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .mobile___longButton {
     width: auto;
   }

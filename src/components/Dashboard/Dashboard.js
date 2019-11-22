@@ -41,9 +41,11 @@ export default class Dashboard extends Component {
 				</ul>
 
 				<h5>Total correct answers: {language.total_score}</h5>
-				<a href='/learn'>
-					<Button className='Dashboard__button mobile___longButton'>Start Practice</Button>
-				</a>
+				<div className='Dashboard__div buttonContainer'>
+					<a href='/learn'>
+						<Button className='Dashboard__button mobile___longButton'>Start Practice</Button>
+					</a>
+				</div>
 			</div>
 		);
 	}

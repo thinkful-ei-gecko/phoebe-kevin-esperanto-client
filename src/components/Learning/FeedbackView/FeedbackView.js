@@ -5,7 +5,7 @@ import "./FeedbackView.css";
 class FeedbackView extends Component {
 	handlePressEnter = e => {
 		if (e.keyCode === 13) {
-			document.querySelector(".nextButton").submit();
+			document.querySelector(".FeedbackView__form").submit();
 		}
 	};
 
@@ -55,7 +55,7 @@ class FeedbackView extends Component {
 						</p>
 					</>
 				)}
-				<form className='nextButton' onSubmit={this.handleSubmit}>
+				<form className='FeedbackView__form' onSubmit={this.handleSubmit}>
 					<Button
 						className='FeedbackView__Button mobile___longButton'
 						abindex='1'

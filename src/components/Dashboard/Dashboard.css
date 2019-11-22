@@ -79,4 +79,9 @@
   .Dashboard__button {
     margin: inherit;
   }
+
+  .Dashboard__div.buttonContainer {
+    width: 100%;
+    text-align: right;
+  }
 }
