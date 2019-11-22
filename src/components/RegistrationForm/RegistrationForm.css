@@ -1,27 +1,49 @@
 .RegistrationForm {
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  border: 1px solid lightgray;
-  background-color: white;
-  border-radius: 3px;
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+	border: 1px solid lightgray;
+	background-color: white;
+	border-radius: 3px;
 }
 
 .RegistrationForm > * {
-  padding: 0 0 1rem;
-  display: flex;
-  flex-direction: column;
+	padding: 0 0 1rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .RegistrationForm__footer {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .RegistrationForm__Link {
-  color: rgb(26, 115, 232);
-  margin-left: 1.5rem;
+	color: rgb(26, 115, 232);
+	margin-left: 0.5rem;
+	font-size: 10pt;
+}
+
+.RegistrationForm__Button {
+	font-size: 10pt;
+}
+
+@media screen and (min-width: 375px) {
+	.RegistrationForm__Link {
+		margin-left: 1.5rem;
+		font-size: calc(10px + 1vmin);
+	}
+
+	.RegistrationForm__Button {
+		font-size: auto;
+	}
+}
+
+@media screen and (min-width: 375px) {
+	.RegistrationForm {
+    max-width: 400px;
+	}
 }

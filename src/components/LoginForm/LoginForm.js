@@ -75,7 +75,7 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <Button type='submit'>
+        <Button className='mobile___longButton' type='submit'>
           Login
         </Button>
       </form>
