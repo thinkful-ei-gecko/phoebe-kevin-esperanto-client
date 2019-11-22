@@ -14,7 +14,7 @@ h1 {
 }
 
 nav {
-  height: 2rem;
+  height: 2.5em;
   width: 100vw;
   background-color: #009a00;
   display: flex;
@@ -33,6 +33,10 @@ nav > * {
 
 .Header__span___usersName {
   margin-right: auto;
+}
+
+.onLearnRoute {
+  font-size: 1pt;
 }
 
 @media screen and (min-width: 768px) {

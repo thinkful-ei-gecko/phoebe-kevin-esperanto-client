@@ -10,7 +10,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FAFBF5;
+  background-color: #FFFFF3;
 }
 
 :root {
@@ -53,4 +53,21 @@ a.italic:hover {
 
 .red {
   color: red;
+}
+
+/* adds focus outline that mozilla doesn't have */
+a:focus, input:focus, button:focus {
+  outline: auto 5px #00CC00;
+  box-shadow: 0;
+  cursor: pointer;
+}
+
+.mobile___longButton {
+  width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile___longButton {
+    width: auto;
+  }
 }

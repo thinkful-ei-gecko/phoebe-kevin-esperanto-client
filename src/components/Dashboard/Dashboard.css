@@ -1,20 +1,82 @@
+.Dashboard__h3 {
+  text-align: center;
+}
+
+.Dashboard___tableHeaders {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: .3em 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .Dashboard__ul {
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: column; 
-  list-style-type: none;
+  justify-content: left;
+  align-items: left;
+}
+
+.Display__scoreHeaders, .Dashboard___scoreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
 }
 
 .Dashboard__li {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  padding-right: .5em;
 }
 
-.table {
+.Dashboard__button {
   display: inline-block;
-  white-space: nowrap;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
-.Display__h4.word {
+.Dashboard__li:nth-child(even) {
+  background: #84d184;
+}
+
+
+.Dashboard__li:nth-child(odd) {
+  background: #e4f0e4;
+  border: 1pt dashed #009a00;
+}
+
+.tableCell {
+  padding: .1em;
+}
+
+.term {
   width: 150px;
-  margin: 0;
+  margin: 0 auto 0 0;
+  padding-left: .4em;
+}
+
+@media screen and (min-width: 425px) {
+  .Display__scoreHeaders, .Dashboard___scoreContainer {
+    width: 65%;
+  }
+
+  .term {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Dashboard___mainContainer {
+    margin: 0 2em;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .Dashboard__button {
+    margin: inherit;
+  }
 }

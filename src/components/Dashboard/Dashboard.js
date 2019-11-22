@@ -11,27 +11,30 @@ export default class Dashboard extends Component {
 		const { language, words } = this.context;
 
 		return (
-			<>
-				<h3>Words to practice</h3>
+			<div className='Dashboard___mainContainer'>
+				<h3 className='Dashboard__h3'>Phrases to Practice</h3>
 				<ul className='Dashboard__ul'>
-					<li className='Dashboard__li'>
-						<div className='Display__h4 word table bold'>Term</div>
+					<li className='Dashboard___tableHeaders Dashboard__li'>
+						<div className='Display__h4 term tableCell bold'>Term</div>
 
 						{/* <div className='bold'>Translation</div> */}
 
-						<div className='table bold'>Correct</div>
-
-						<div className='table bold'>Wrong</div>
-            <div className='table bold'>Total</div>
+						<div className='Display__scoreHeaders'>
+							<div className='tableCell bold'>Correct</div>
+							<div className='tableCell bold'>Wrong</div>
+							<div className='tableCell bold'>Total</div>
+						</div>
 					</li>
 					{words.map(word => {
 						return (
 							<li key={word.id} className='Dashboard__li'>
 								{/* dangerouslySet h4 to allow for 'ĉ' character */}
-								<h4 className='Display__h4 word table' dangerouslySetInnerHTML={{__html: word.original}} />
-								<div className='table'>{word.correct_count}</div>
-								<div className='table'>{word.incorrect_count}</div>
-                <div className='table'>{word.correct_count + word.incorrect_count}</div>
+								<h4 className='Display__h4 term tableCell' dangerouslySetInnerHTML={{__html: word.original}} />
+								<div className='Dashboard___scoreContainer'>
+									<div className='tableCell'>{word.correct_count}</div>
+									<div className='tableCell'>{word.incorrect_count}</div>
+									<div className='tableCell'>{word.correct_count + word.incorrect_count}</div>
+								</div>
 							</li>
 						);
 					})}
@@ -39,9 +42,9 @@ export default class Dashboard extends Component {
 
 				<h5>Total correct answers: {language.total_score}</h5>
 				<a href='/learn'>
-					<Button>Start</Button>
+					<Button className='Dashboard__button mobile___longButton'>Start Practice</Button>
 				</a>
-			</>
+			</div>
 		);
 	}
 }

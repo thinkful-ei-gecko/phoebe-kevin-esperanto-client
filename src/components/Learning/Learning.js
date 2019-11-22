@@ -5,7 +5,7 @@ import LanguageContext from "../../contexts/LanguageContext";
 import DisplayScore from "./DisplayScore";
 // import DisplayFeedback from "./DisplayFeedback";
 import QuestionView from "./QuestionView";
-import FeedbackView from "./FeedbackView";
+import FeedbackView from "./FeedbackView/FeedbackView";
 // import { Label, Input } from "../../components/Form/Form";
 // import Button from "../../components/Button/Button";
 import "./Learning.css";
@@ -53,13 +53,13 @@ export default class Learning extends Component {
 	};
 
 	handleNextWord = e => {
-		this.resetState();
 		const {
 			nextWord,
 			totalScore,
 			wordCorrectCount,
 			wordIncorrectCount
 		} = this.state.nextWordInfo;
+		this.resetState();
 		this.context.setNewWord(
 			nextWord,
 			totalScore,

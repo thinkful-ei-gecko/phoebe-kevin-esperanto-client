@@ -1,22 +1,22 @@
 .Button {
-  background-color: #009a00;
-  border: clear;
+  background-color: #ffd54f;
+  border: #ffd54f;
   border-radius: 5px;
-  color: white;
+  color: black;
   font-size: 12pt;
   font-weight: 600;
   padding: .5rem 1rem;
-  box-shadow: 0 5px green;
+  box-shadow: 0 5px #c8a415;
 }
 
 .Button:hover {
-  background-color: #00B300;
-  box-shadow: 0 5px #009900;
+  background-color: #ffff81;
+  box-shadow: 0 5px #ffd54f;
   cursor: pointer;
 }
 
 .Button:active {
-  background-color: #00B300;
+  background-color: #ffff81;
   box-shadow: none;
   transform: translateY(5px);
 }

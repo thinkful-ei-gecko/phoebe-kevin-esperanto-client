@@ -1,12 +1,12 @@
 import React from "react";
-import { Label, Input } from "../../components/Form/Form";
-import Button from "../../components/Button/Button";
+import { Label, Input } from "../Form/Form";
+import Button from "../Button/Button";
 
 const QuestionView = props => {
 	return (
 		<>
 			<div className='Learning__mainContainer'>
-				<h2>Write this in English:</h2>
+				<h2 className='Learning__h2'>Write this in English:</h2>
 				<span className='italic esperantoWord' dangerouslySetInnerHTML={{__html: props.nextWord}} />
 				<form className='Learning__form' onSubmit={props.handleSubmit}>
 					<div className='Learning_div labelAndInputContainer'>
@@ -26,7 +26,7 @@ const QuestionView = props => {
 							autoFocus
 							required
 						></Input>
-						<Button className='Learning__Button' type='submit'>
+						<Button className='Learning__Button mobile___longButton' type='submit'>
 							Check
 						</Button>
 					</div>

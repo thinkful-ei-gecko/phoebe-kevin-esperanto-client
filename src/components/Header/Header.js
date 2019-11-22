@@ -64,8 +64,8 @@ class Header extends Component {
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
         <h1>
-          <Link className='Header__Link h1Link italic'to='/'>
-            ~irantas~
+          <Link className='Header__Link h1Link italic' to='/'>
+            iranta
           </Link>
         </h1>
       </header>
