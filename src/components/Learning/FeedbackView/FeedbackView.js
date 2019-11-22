@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "../../Button/Button";
-import './FeedbackView.css'
+import "./FeedbackView.css";
 
 class FeedbackView extends Component {
 	handlePressEnter = e => {
@@ -23,32 +23,44 @@ class FeedbackView extends Component {
 	};
 
 	render = () => {
-		const wasCorrect = this.props.isCorrect;
+		const { isCorrect, nextWord, answer, guess } = this.props;
+
+		// Re-add after grading
+		// <div
+		// 	className='FeedbackView__p'
+		// 	dangerouslySetInnerHTML={{ __html: `Esperanto: "${this.props.nextWord}"` }}
+		// />
+		// <div className='FeedbackView__p'>
+		// 	English: "{this.props.answer}"
+		// </div>
+		// {!wasCorrect && (
+		// 	<div className='FeedbackView__p'>
+		// 		You said: "{this.props.guess}"
+		// 	</div>
+		// )}
 		return (
-			<div className='Learning__mainContainer'>
-				{this.props.isCorrect ? (
-					<h2 className='Learning__h2'>You were correct! :D</h2>
+			<div className='Learning__mainContainer DisplayFeedback'>
+				{isCorrect ? (
+					<>
+						<h2 className='Learning__h2'>You were correct! :D</h2>
+						<p className='FeedbackView__p pContainer'>
+							The correct translation for "<span className='italic'>{nextWord}</span>" is "{answer}".
+						</p>
+					</>
 				) : (
-					<h2 className='Learning__h2'>Good try, but not quite right :(</h2>
+					<>
+						<h2 className='Learning__h2'>Good try, but not quite right :(</h2>
+						<p className='FeedbackView__p pContainer'>
+							The correct translation for "<span className='italic'>{nextWord}</span>" is "{answer}". You said "{guess}".
+						</p>
+					</>
 				)}
-				<p className='FeedbackView__p pContainer'>
-					<div
-						className='FeedbackView__p'
-						dangerouslySetInnerHTML={{ __html: `Esperanto: ${this.props.nextWord}` }}
-					/>
-					<div className='FeedbackView__p'>
-						{/* English: <span className={`italic ${!wasCorrect && 'green'}`}> {this.props.answer}</span> */}
-						English: {this.props.answer}
-					</div>
-					{!wasCorrect && (
-						<div className='FeedbackView__p'>
-							{/* You said: <span className='italic red'> {this.props.guess}</span> */}
-							You said: {this.props.guess}
-						</div>
-					)}
-				</p>
 				<form className='nextButton' onSubmit={this.handleSubmit}>
-					<Button className='FeedbackView__Button mobile___longButton' abindex='1' type='submit'>
+					<Button
+						className='FeedbackView__Button mobile___longButton'
+						abindex='1'
+						type='submit'
+					>
 						Next
 					</Button>
 				</form>

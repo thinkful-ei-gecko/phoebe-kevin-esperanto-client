@@ -81,10 +81,6 @@
   font-size: 1.3em;
 }
 
-/* .DisplayScore__div {
-  border: .5pt solid #EAEBE6;
-} */
-
 @media screen and (min-width: 768px) {
   .labelAndInputContainer {
     width: 500px;

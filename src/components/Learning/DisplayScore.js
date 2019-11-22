@@ -2,7 +2,7 @@ import React from "react";
 
 const DisplayScore = props => {
 	return (
-		<div className='DisplayScore__div'>
+		<div className='DisplayScore'>
 			<p className='DisplayScore__p'>Total Correct: {props.totalScore}</p>
 		</div>
 	);
