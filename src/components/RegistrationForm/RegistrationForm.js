@@ -81,11 +81,10 @@ class RegistrationForm extends Component {
           />
         </div>
         <footer className='RegistrationForm__footer'>
+          <Link className='RegistrationForm__Link' to='/login'>Already have an account?</Link>
           <Button className='RegistrationForm__Button' type='submit'>
             Sign up
-          </Button>
-          {' '}
-          <Link className='RegistrationForm__Link' to='/login'>Already have an account?</Link>
+          </Button>{' '}
         </footer>
       </form>
     )

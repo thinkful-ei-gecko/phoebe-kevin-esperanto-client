@@ -14,6 +14,11 @@
   flex-direction: column;
 }
 
+.LoginForm__Button {
+  display: block;
+  margin: .5em auto;
+}
+
 .alert {
   margin: 0;
 }

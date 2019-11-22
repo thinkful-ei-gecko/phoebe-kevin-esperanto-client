@@ -1,5 +1,5 @@
 .RegistrationForm {
-	max-width: 350px;
+	max-width: 325px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1rem;
@@ -15,15 +15,16 @@
 }
 
 .RegistrationForm__footer {
-	padding: 0;
+	height: 3em;
+	padding: .5rem;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .RegistrationForm__Link {
 	color: rgb(26, 115, 232);
-	margin-left: 0.5rem;
 	font-size: 10pt;
 }
 
@@ -33,17 +34,10 @@
 
 @media screen and (min-width: 375px) {
 	.RegistrationForm__Link {
-		margin-left: 1.5rem;
-		font-size: calc(10px + 1vmin);
+		font-size: .8em;
 	}
 
 	.RegistrationForm__Button {
-		font-size: auto;
-	}
-}
-
-@media screen and (min-width: 375px) {
-	.RegistrationForm {
-    max-width: 400px;
+		font-size: .8em;
 	}
 }

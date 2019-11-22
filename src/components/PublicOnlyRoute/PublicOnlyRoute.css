@@ -1,6 +1,5 @@
 .PublicOnlyRoute {
   margin: 1em;
-  text-align: center;
 }
 
 .PublicOnlyRoute__div.imagesContainer {
@@ -40,21 +39,21 @@
 
 @media screen and (min-width: 1020px) {
   .PublicOnlyRoute {
-    margin: 3em 2em;
+    margin: 1em 2em;
   }
 
   .PublicOnlyRoute__div.form {
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
   }
 
   .PublicOnlyRoute__div.imagesContainer {
-    width: 50%;
-    justify-content: flex-end;
+    width: 48%;
+    /* justify-content: flex-end; */
   }
 
   .PublicOnlyRoute__img {
-    height: 30em;
+    height: 28em;
   }
 
   .PublicOnlyRoute__img.tableView {
@@ -65,7 +64,7 @@
 @media screen and (min-width: 1440px) {
   .PublicOnlyRoute {
     max-width: 1200px;
-    margin: 3em auto;
+    margin: 1em auto;
     justify-content: flex-start;
   }
 
