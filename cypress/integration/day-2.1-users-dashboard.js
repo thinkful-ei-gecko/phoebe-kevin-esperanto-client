@@ -45,7 +45,7 @@ describe(`User story: User's dashboard`, function() {
           .and('have.text', 'Start practicing')
 
         cy.get('h3')
-          .should('have.text', 'Words to practice')
+          .should('have.text', 'Phrases to practice')
       })
     })
   })
@@ -62,13 +62,13 @@ describe(`User story: User's dashboard`, function() {
           cy.root()
             .should(
               'contain',
-              `correct answer count: ${word.correct_count}`
+              `${word.correct_count}`
             )
 
           cy.root()
             .should(
               'contain',
-              `incorrect answer count: ${word.incorrect_count}`
+              `${word.incorrect_count}`
             )
         })
       })

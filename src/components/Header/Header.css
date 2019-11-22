@@ -27,8 +27,8 @@ nav > * {
   color: white;
 }
 
-.Header__Link {
-  text-decoration: none;
+.h1Link:hover {
+  font-style: normal;
 }
 
 .Header__span___usersName {
