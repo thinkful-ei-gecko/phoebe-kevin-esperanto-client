@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
 			<div className='Dashboard___mainContainer'>
 				<h3 className='Dashboard__h3'>Phrases to Practice</h3>
 				<ul className='Dashboard__ul'>
-					<li className='Dashboard___tableHeaders Dashboard__li'>
+					<div className='Dashboard___tableHeaders Dashboard__li'>
 						<div className='Display__h4 term tableCell bold'>Term</div>
 
 						{/* <div className='bold'>Translation</div> */}
@@ -24,7 +24,7 @@ export default class Dashboard extends Component {
 							<div className='tableCell bold'>Wrong</div>
 							<div className='tableCell bold'>Total</div>
 						</div>
-					</li>
+					</div>
 					{words.map(word => {
 						return (
 							<li key={word.id} className='Dashboard__li'>
