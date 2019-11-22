@@ -40,10 +40,10 @@ describe(`User story: Go to next word`, function() {
           cy.get('p').eq(0)
             .should(
               'have.text',
-              `Your total score is: ${languageHeadFixture.totalScore}`,
+              `Total Correct: ${languageHeadFixture.totalScore}`,
             )
           cy.get('h2')
-            .should('have.text', 'Translate to English:')
+            .should('have.text', 'Write this in English:')
             .siblings('span')
             .should('have.text', languageHeadFixture.nextWord)
         })
@@ -51,14 +51,14 @@ describe(`User story: Go to next word`, function() {
 
     cy.get('main form').within($form => {
       cy.get('label[for=learn-guess-input]')
-        .should('have.text', `What's the translation for this word?`)
+        .should('have.text', `English Translation`)
 
       cy.get('input#learn-guess-input')
         .should('have.attr', 'type', 'text')
         .and('have.attr', 'required', 'required')
 
       cy.get('button[type=submit]')
-        .should('have.text', 'Submit your answer')
+        .should('have.text', 'Check')
     })
   })
 })
