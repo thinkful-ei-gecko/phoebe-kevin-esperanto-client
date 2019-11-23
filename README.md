@@ -1,47 +1,34 @@
-# Spaced Repetition Capstone
+# Iranta - Client
 
-## Setup
+This is the client code repository for Iranta, a full stack web app by **Kevin Wei** & **Phoebe Law** for learning Esperanto through the spaced repetition algorithm.
 
-To setup the application
+- [Link to Live App](https://iranta.now.sh/)
+- [Link to Server Repo](https://github.com/thinkful-ei-gecko/phoebe-kevin-esperanto-server)
 
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+## Summary
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
+Iranta is a language learning app that focuses on Esperanto words and phrases. Users will expand their Esperanto vocabulary by submitting guesses for words one-by-one in flashcard form. The words are presented in a deterministic order based on how many correct and wrong answers the user has previously submitted for the word. This learning methodology is known as _spaced repetition_ and is scientifically proven to improve memory retention.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+![](src/assets/iranta_desktop_01.png)
+> Desktop View
 
-## Running project
+![](src/assets/iranta_tablet_01.png)
+> Tablet View
 
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
+![](src/assets/iranta_mobile_01.png)
+> Mobile View
 
-## Running the tests
+## Technology Stack
 
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
+### Frontend
 
-Cypress has the following expectations:
+- **React** + **React Router**, **HTML5**, **CSS3** for client-side view
+- **Cypress** for end-to-end testing
 
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `REACT_APP_API_ENDPOINT`
+### Backend
 
-To start the tests run the command:
-
-```bash
-npm run cypress:open
-```
-
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
-
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
+- **Express** for handling API requests
+- **Knex.js** for interfacing with the **PostgreSQL** database
+- **Postgrator** for database migration
+- **Mocha**, **Chai**, **Supertest** for endpoints testing
+- **JSON Web Token**, **bcryptjs** for user authentication / authorization
